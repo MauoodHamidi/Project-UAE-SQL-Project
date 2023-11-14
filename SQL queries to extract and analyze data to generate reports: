@@ -1,0 +1,7 @@
+SELECT
+  customer_id,
+  SUM(amount) AS total_transaction_value
+FROM transactions
+GROUP BY customer_id
+ORDER BY total_transaction_value DESC
+LIMIT 10;
