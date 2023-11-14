@@ -1,0 +1,8 @@
+Create a view to summarize key financial metrics
+CREATE VIEW financial_metrics AS
+  SELECT
+    customer_id,
+    SUM(account_balance) AS total_account_balance,
+    SUM(available_balance) AS total_available_balance
+  FROM financial_data
+  GROUP BY customer_id
