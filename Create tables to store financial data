@@ -1,0 +1,10 @@
+Create tables to store financial data
+CREATE TABLE financial_data (
+  financial_data_id INT NOT NULL AUTO_INCREMENT,
+  customer_id INT NOT NULL,
+  account_balance DECIMAL(10,2) NOT NULL,
+  available_balance DECIMAL(10,2) NOT NULL,
+  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (financial_data_id),
+  FOREIGN KEY (customer_id) REFERENCES customers (customer_id)
+);
